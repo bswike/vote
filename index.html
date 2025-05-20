@@ -3,138 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Easy Voting for 2 College Brothers!</title>
+    <title>Vote Quick & Easy for 2 College Brothers!</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif; /* Simplified font stack */
             line-height: 1.7;
-            padding: 20px; /* Reduced padding for smaller screens */
-            max-width: 800px;
-            margin: 20px auto; /* Reduced margin */
-            background-color: #f8f8f8;
-            color: #333;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 780px; /* Slightly adjusted max-width */
+            margin: 30px auto;
+            background-color: #f9f7fc; /* Lighter, slightly purplish background */
+            color: #444; /* Softer text color */
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
-        h1, h2 {
+        h1 {
             color: #512da8; /* Deep Purple */
-            margin-bottom: 1.5rem;
+            font-size: 2em; /* Slightly larger */
+            margin-bottom: 1rem;
+            text-align: center;
+            font-weight: bold;
+        }
+        h2 {
+            color: #5E35B1; /* Slightly lighter purple for subheadings */
+            font-size: 1.5em;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
             text-align: center;
         }
         p {
-            margin-bottom: 1rem;
+            margin-bottom: 1.2rem;
+            font-size: 1.05em;
         }
         strong {
             font-weight: bold;
-            color: #512da8;
+            color: #512da8; /* Purple for emphasis */
         }
         .bookmarklet-container {
-            margin: 1.5rem 0; /* Reduced margin */
-            padding: 20px;
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 6px;
+            margin: 2rem auto;
+            padding: 25px;
+            background-color: #ffffff;
+            border: 2px solid #D1C4E9; /* Lighter purple border */
+            border-radius: 8px;
             text-align: center;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        }
+        .bookmarklet-link-container p {
+            margin-bottom: 0.5rem; /* Space above the link */
         }
         .bookmarklet-link {
             display: inline-block;
-            padding: 12px 24px;
+            padding: 14px 28px;
             background-color: #ffeb3b; /* Bright Yellow/Gold */
-            color: #333;
+            color: #333; /* Dark text for contrast on yellow */
             text-decoration: none;
             font-weight: bold;
-            border-radius: 6px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s ease;
-            word-break: break-all; /* Helps if the link text itself is very long, though not the case here */
+            font-size: 1.15em;
+            border-radius: 8px; /* More rounded */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+            transition: all 0.3s ease; /* Smooth transition for hover */
+            cursor: grab; /* Indicates draggable */
         }
         .bookmarklet-link:hover {
-            background-color: #fdd835; /* Slightly darker gold on hover */
+            background-color: #fdd835; /* Slightly darker gold */
+            transform: translateY(-2px); /* Slight lift on hover */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
-        .instructions {
-            margin-top: 1.5rem; /* Reduced margin */
-            padding: 20px;
-            background-color: #f0f0f0;
-            border: 1px solid #eee;
-            border-radius: 6px;
+        .instructions-section {
+            margin-top: 2.5rem;
+            padding: 25px;
+            background-color: #EDE7F6; /* Very light purple for instruction background */
+            border: 1px solid #D1C4E9;
+            border-radius: 8px;
         }
-        .instructions h2 {
-            color: #512da8;
+        .instructions-section h2 {
             text-align: left;
             margin-top: 0;
+            margin-bottom: 1.5rem;
         }
-        .instructions ol, .instructions ul {
-            padding-left: 20px;
+        .instructions-section ol, .instructions-section ul {
+            padding-left: 25px; /* More indent */
             margin-bottom: 1rem;
         }
-        .instructions li {
-            margin-bottom: 0.5rem;
+        .instructions-section li {
+            margin-bottom: 0.8rem; /* More spacing between list items */
         }
-        .voting-link {
-            color: #007bff; /* Standard link blue */
+        .voting-site-link {
+            color: #673AB7; /* Purple link */
             text-decoration: underline;
+            font-weight: bold;
         }
-        .note {
-            font-size: 0.9em;
-            color: #777;
-            margin-top: 1.5rem;
+        .voting-site-link:hover {
+            color: #512da8; /* Darker purple on hover */
+        }
+        .final-note {
+            font-size: 0.95em;
+            color: #666;
+            margin-top: 2rem;
             text-align: center;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 6px;
+            border: 1px dashed #D1C4E9;
+        }
+        .emoji { /* Just for fun, if you want to use them */
+             display: inline-block;
+             margin-left: 5px;
         }
 
         /* Responsive adjustments */
         @media (max-width: 600px) {
             body {
                 padding: 15px;
-                margin: 15px;
+                margin: 10px; /* Less margin on small screens */
             }
             h1 {
-                font-size: 1.8em;
+                font-size: 1.6em;
+            }
+            h2 {
+                font-size: 1.3em;
             }
             .bookmarklet-link {
-                padding: 10px 18px;
-                font-size: 0.95em;
+                padding: 12px 20px;
+                font-size: 1em;
             }
         }
     </style>
 </head>
 <body>
-    <h1>Easy Voting for 2 College Brothers!</h1>
-    <p>Help support 2 College Brothers Moving & Storage by easily adding a voting tool to your browser. This will help select their three entries on the ballot.</p>
+    <h1>Vote Quick & Easy for 2 College Brothers! <span class="emoji">🎉</span></h1>
+    <p>Want to support <strong>2 College Brothers Moving & Storage</strong> in a flash? This page gives you a special browser button to help make voting super simple!</p>
 
     <div class="bookmarklet-container">
-        <p><strong>Drag the link below to your Bookmarks Bar (on a desktop browser):</strong></p>
-<a class="bookmarklet-link" href='javascript:(function(){var targetSite="https://tampabaybestofthebest.com/vote/#";if(!window.location.href.startsWith(targetSite.substring(0,targetSite.length-2))){window.location.href=targetSite;}else{function fEBT(sel,txt,cPA){var els=document.querySelectorAll(sel);for(var i=0;i<els.length;i++){if(els[i].textContent.trim().includes(txt)){return cPA?els[i].closest("a"):els[i];}}return null;}function sRC(el){if(!el)return false;const eP={bubbles:true,cancelable:true,view:window};el.dispatchEvent(new PointerEvent("pointerdown",eP));el.dispatchEvent(new MouseEvent("mousedown",eP));el.dispatchEvent(new PointerEvent("pointerup",eP));el.dispatchEvent(new MouseEvent("mouseup",eP));el.dispatchEvent(new MouseEvent("click",eP));if(el.type==="checkbox"){if(!el.checked)el.checked=true;el.dispatchEvent(new Event("change",eP));}return true;}var sels=[{type:"navigate",navS:"p.category-text[data-v-33826b8f]",navT:"Services",cPA:true,cbS:null},{type:"navigate",navS:"button.subcategory[data-v-33826b8f]",navT:"Moving Company",cPA:false,cbS:null},{type:"vote",navS:null,navT:null,cPA:false,cbS:"input#option_0_1"},{type:"navigate",navS:"div.ballot-button.active.secondary-button[data-v-4002897a]",navT:"Continue to Moving Company for Out of State Moves",cPA:false,cbS:null},{type:"vote",navS:null,navT:null,cPA:false,cbS:"input#option_0_0"},{type:"navigate",navS:"div.ballot-button.active.secondary-button[data-v-4002897a]",navT:"Choose New Category",cPA:false,cbS:null},{type:"navigate",navS:"p.category-text[data-v-33826b8f]",navT:"Services",cPA:true,cbS:null},{type:"navigate",navS:"button.subcategory[data-v-33826b8f]",navT:"Storage Companies",cPA:false,cbS:null},{type:"vote",navS:null,navT:null,cPA:false,cbS:"input#option_0_0"}];var gBCS="div.ballot-buttons-container";var ci=0;var dN=1000,dAC=1500,dAVB=700,dS=400;function nxt(){if(ci>=sels.length){alert("All actions attempted. Review ballot & submit.");return;}var itm=sels[ci];function clkAVB(){var bC=document.querySelector(gBCS);var aVB=null;if(bC){var pB=bC.querySelectorAll("button.ballot-button.add-to-button");for(var i=0;i<pB.length;i++){if(pB[i].textContent.trim()==="Add Vote"&&!pB[i].disabled){aVB=pB[i];break;}}}if(aVB){if(sRC(aVB)){setTimeout(function(){ci++;setTimeout(nxt,dN);},dAVB);}else{ci++;setTimeout(nxt,dN);}}else{ci++;setTimeout(nxt,dN);}}function clkCB(){var cbEl=document.querySelector(itm.cbS);if(cbEl){cbEl.scrollIntoView({behavior:"smooth",block:"center",inline:"center"});setTimeout(function(){if(sRC(cbEl)){setTimeout(clkAVB,dAC);}else{ci++;setTimeout(nxt,dN);}},dS);}else{ci++;setTimeout(nxt,dN);}}if(itm.type==="navigate"){var navEl=fEBT(itm.navS,itm.navT,itm.cPA||false);if(navEl){navEl.scrollIntoView({behavior:"smooth",block:"center",inline:"center"});setTimeout(function(){navEl.click();ci++;setTimeout(nxt,dN);},dS);}else{ci++;setTimeout(nxt,dN);}}else if(itm.type==="vote"){clkCB();}else{ci++;setTimeout(nxt,dN);}}nxt();}})();'>Vote for 2CB (Drag Me!)</a>
-        <p class="note">Or see instructions below for manual bookmark creation on mobile.</p>
+        <p><strong>Ready? Drag this cool button to your Bookmarks Bar:</strong></p>
+        <a class="bookmarklet-link" title="Drag me to your Bookmarks Bar!" href='javascript:(function(){var targetSite="https://tampabaybestofthebest.com/vote/#";if(!window.location.href.startsWith(targetSite.substring(0,targetSite.length-2))){window.location.href=targetSite;}else{function fEBT(sel,txt,cPA){var els=document.querySelectorAll(sel);for(var i=0;i<els.length;i++){if(els[i].textContent.trim().includes(txt)){return cPA?els[i].closest("a"):els[i];}}return null;}function sRC(el){if(!el)return false;const eP={bubbles:true,cancelable:true,view:window};el.dispatchEvent(new PointerEvent("pointerdown",eP));el.dispatchEvent(new MouseEvent("mousedown",eP));el.dispatchEvent(new PointerEvent("pointerup",eP));el.dispatchEvent(new MouseEvent("mouseup",eP));el.dispatchEvent(new MouseEvent("click",eP));if(el.type==="checkbox"){if(!el.checked)el.checked=true;el.dispatchEvent(new Event("change",eP));}return true;}var sels=[{type:"navigate",navS:"p.category-text[data-v-33826b8f]",navT:"Services",cPA:true,cbS:null},{type:"navigate",navS:"button.subcategory[data-v-33826b8f]",navT:"Moving Company",cPA:false,cbS:null},{type:"vote",navS:null,navT:null,cPA:false,cbS:"input#option_0_1"},{type:"navigate",navS:"div.ballot-button.active.secondary-button[data-v-4002897a]",navT:"Continue to Moving Company for Out of State Moves",cPA:false,cbS:null},{type:"vote",navS:null,navT:null,cPA:false,cbS:"input#option_0_0"},{type:"navigate",navS:"div.ballot-button.active.secondary-button[data-v-4002897a]",navT:"Choose New Category",cPA:false,cbS:null},{type:"navigate",navS:"p.category-text[data-v-33826b8f]",navT:"Services",cPA:true,cbS:null},{type:"navigate",navS:"button.subcategory[data-v-33826b8f]",navT:"Storage Companies",cPA:false,cbS:null},{type:"vote",navS:null,navT:null,cPA:false,cbS:"input#option_0_0"}];var gBCS="div.ballot-buttons-container";var ci=0;var dN=1000,dAC=1500,dAVB=700,dS=400;function nxt(){if(ci>=sels.length){alert("All actions attempted. Review ballot & submit.");return;}var itm=sels[ci];function clkAVB(){var bC=document.querySelector(gBCS);var aVB=null;if(bC){var pB=bC.querySelectorAll("button.ballot-button.add-to-button");for(var i=0;i<pB.length;i++){if(pB[i].textContent.trim()==="Add Vote"&&!pB[i].disabled){aVB=pB[i];break;}}}if(aVB){if(sRC(aVB)){setTimeout(function(){ci++;setTimeout(nxt,dN);},dAVB);}else{ci++;setTimeout(nxt,dN);}}else{ci++;setTimeout(nxt,dN);}}function clkCB(){var cbEl=document.querySelector(itm.cbS);if(cbEl){cbEl.scrollIntoView({behavior:"smooth",block:"center",inline:"center"});setTimeout(function(){if(sRC(cbEl)){setTimeout(clkAVB,dAC);}else{ci++;setTimeout(nxt,dN);}},dS);}else{ci++;setTimeout(nxt,dN);}}if(itm.type==="navigate"){var navEl=fEBT(itm.navS,itm.navT,itm.cPA||false);if(navEl){navEl.scrollIntoView({behavior:"smooth",block:"center",inline:"center"});setTimeout(function(){navEl.click();ci++;setTimeout(nxt,dN);},dS);}else{ci++;setTimeout(nxt,dN);}}else if(itm.type==="vote"){clkCB();}else{ci++;setTimeout(nxt,dN);}}nxt();}})();'>Vote for 2CB! <span class="emoji">🗳️</span></a>
+        <p class="note">(If dragging is tricky, see the "How to Use" steps below!)</p>
     </div>
 
-    <div class="instructions">
-        <h2>How to Use This Voting Bookmarklet:</h2>
+    <div class="instructions-section">
+        <h2>How to Use Your Speedy Voting Button:</h2>
         <ol>
-            <li><strong>On Desktop:</strong> Drag the "Vote for 2CB (Drag Me!)" link above directly onto your browser's Bookmarks Bar (also known as the Favorites Bar). 
-                <br><em>(If you don't see the Bookmarks Bar, try pressing Ctrl+Shift+B on Windows/ChromeOS or Cmd+Shift+B on Mac).</em>
-            </li>
-            <li><strong>On Mobile (Manual Creation - more technical):</strong>
+            <li><strong>For Desktop Browsers (like Chrome, Firefox, Edge):</strong>
                 <ul>
-                    <li>Tap and hold the "Vote for 2CB (Drag Me!)" link above.</li>
-                    <li>Choose an option like "Copy Link Address," "Copy URL," or "Copy Link."</li>
-                    <li>Open your mobile browser's bookmarks manager (the steps vary by browser).</li>
-                    <li>Create a new bookmark. You might need to bookmark the current page first, then edit that new bookmark.</li>
-                    <li>For the bookmark's name, enter something like "Vote for 2CB!".</li>
-                    <li><strong>Important:</strong> For the bookmark's URL/Address field, delete any existing web address and then paste the copied code (it will start with <code>javascript:</code>).</li>
-                    <li>Save the bookmark.</li>
+                    <li>Simply <strong>drag the yellow "Vote for 2CB! 🗳️" button</strong> above straight onto your browser's Bookmarks Bar.
+                    <br><em>(Little Tip: If your Bookmarks Bar isn't showing, try pressing Ctrl+Shift+B on Windows, or Cmd+Shift+B on a Mac.)</em></li>
                 </ul>
             </li>
-            <li>Go to the main voting website page: <a class="voting-link" href="https://tampabaybestofthebest.com/vote/#" target="_blank">https://tampabaybestofthebest.com/vote/#</a></li>
-            <li>Click the "Vote for 2CB (Drag Me!)" bookmarklet that you saved.</li>
-            <li>The script will attempt to navigate and make selections. 
+            <li><strong>For Phones & Tablets (A Few Quick Taps):</strong>
                 <ul>
-                    <li>If you weren't already on the voting site, the first click will take you there. You'll then need to **click the bookmarklet again** once the voting page has loaded.</li>
+                    <li>Tap and hold the yellow "Vote for 2CB! 🗳️" button above.</li>
+                    <li>From the menu that pops up, choose "Copy Link Address" (or similar wording like "Copy URL" or "Copy Link").</li>
+                    <li>Now, open your browser's bookmarks section.</li>
+                    <li>Create a new bookmark (you might need to bookmark any page first, then find it in your list and choose "Edit").</li>
+                    <li>Give your new bookmark a fun name (like "2CB Fast Vote!").</li>
+                    <li>In the Address or URL field for the bookmark, delete any existing web address and then paste the link you copied. (It will start with <code>javascript:</code>).</li>
+                    <li>Save it, and you're all set!</li>
                 </ul>
             </li>
-            <li>After the script runs (it will show an alert: "All actions attempted..."), please <strong>review your ballot</strong> on the voting site to ensure the correct items are selected, and then click the final <strong>"Submit Voting Ballot"</strong> button yourself.</li>
+            <li><strong>Using Your New Button:</strong>
+                <ul>
+                    <li>First, head over to the voting website: <a class="voting-site-link" href="https://tampabaybestofthebest.com/vote/#" target="_blank">Best of the Best Voting Page</a>.</li>
+                    <li>Once the page is loaded, just click your new "Vote for 2CB!" bookmark.</li>
+                    <li><span class="emoji">✨</span> Magic! The helper will start selecting the entries.
+                        <em>(If you weren't on the voting site, the first click will take you there. Just click your bookmark again once the page loads!)</em></li>
+                </ul>
+            </li>
+            <li><strong>Important Final Step:</strong> After the helper finishes (it will pop up an "All actions attempted..." message), please <strong>double-check your ballot</strong> on the site to make sure everything looks right. Then, you click the website's own <strong>"Submit Voting Ballot"</strong> button to cast your votes officially.</li>
         </ol>
     </div>
 
-    <p class="note">This tool automates the selection of three specific entries for 2 College Brothers Moving & Storage to simplify the voting process. You are responsible for reviewing and submitting the final ballot. Make sure all selectors within the bookmarklet code are up-to-date if the website changes.</p>
+    <p class="final-note">This little helper makes voting for <strong>2 College Brothers</strong> in their three categories a breeze! <br>Remember, it just helps with the selections; you always have the final say by submitting the ballot. Happy voting!</p>
 </body>
 </html>
