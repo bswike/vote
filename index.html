@@ -4,53 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vote Quick & Easy for 2 College Brothers!</title>
+
     <link rel="icon" href="https://2collegebrothers.com/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="https://2collegebrothers.com/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="https://2collegebrothers.com/favicon.ico"> <meta property="og:title" content="Vote Quick & Easy for 2 College Brothers!">
+    <link rel="apple-touch-icon" href="https://2collegebrothers.com/favicon.ico">
+
+    <meta property="og:title" content="Vote Quick & Easy for 2 College Brothers!">
     <meta property="og:description" content="A simple helper page to make voting for 2 College Brothers super fast & easy!">
-    <meta property="og:image" content="https://swikle.com/images/social-preview.png"> <meta property="og:url" content="https://swikle.com/"> <meta property="og:type" content="website">
-    <meta property="og:url" content="https://swikle.com/">
+    <meta property="og:image" content="https://swikle.com/images/social-preview.png"> <meta property="og:url" content="https://swikle.com/">
     <meta property="og:type" content="website">
+    
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Vote Quick & Easy for 2 College Brothers!">
     <meta name="twitter:description" content="A simple helper page to make voting for 2 College Brothers super fast!">
-    <meta name="twitter:image" content="https://swikle.com/images/your_own_social_preview_image.png">
-
-    <style>
+    <meta name="twitter:image" content="https://swikle.com/images/social-preview.png"> <style>
         body {
             font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
             line-height: 1.7;
             padding: 20px;
-            padding-top: 80px; /* Add padding to top to make space for the fixed logo */
+            padding-top: 90px; /* Add padding to top to make space for the logo */
             max-width: 780px;
             margin: 30px auto;
             background-color: #f9f7fc;
             color: #444;
             border-radius: 10px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            position: relative; /* Needed if you ever wanted to position something absolutely relative to body */
+            position: relative; 
         }
-        .header-logo {
-            position: absolute; /* Changed to absolute for simpler positioning within a potentially centered body */
-            top: 15px;
-            left: 15px;
-            max-width: 150px; /* Adjust as needed for size */
-            height: auto; /* Maintain aspect ratio */
-            z-index: 10; /* Ensure it's above other content if overlap occurs */
+        .header-logo { /* CSS for the top-left logo */
+            position: absolute; 
+            top: 20px;
+            left: 20px;
+            max-width: 160px; 
+            height: auto; 
+            z-index: 10; 
         }
         h1 {
-            color: #512da8; /* Deep Purple */
+            color: #512da8; 
             font-size: 2em;
             margin-bottom: 1rem;
             text-align: center;
             font-weight: bold;
         }
         h2 {
-            color: #5E35B1; /* Slightly lighter purple for subheadings */
+            color: #5E35B1; 
             font-size: 1.5em;
             margin-top: 2.5rem;
             margin-bottom: 1rem;
-            text-align: center; /* Centered main H2s */
+            text-align: center; 
         }
         p {
             margin-bottom: 1.2rem;
@@ -58,7 +59,7 @@
         }
         strong {
             font-weight: bold;
-            color: #512da8; /* Purple for emphasis */
+            color: #512da8; 
         }
         .bookmarklet-container {
             margin: 2rem auto;
@@ -75,7 +76,7 @@
         .bookmarklet-link {
             display: inline-block;
             padding: 14px 28px;
-            background-color: #ffeb3b; /* Bright Yellow/Gold */
+            background-color: #ffeb3b; 
             color: #333;
             text-decoration: none;
             font-weight: bold;
@@ -90,32 +91,32 @@
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
-        .instructions-section, .manual-voting-section { /* Applied same style to new section */
+        .instructions-section, .manual-voting-section { 
             margin-top: 2.5rem;
             padding: 25px;
             background-color: #EDE7F6; 
             border: 1px solid #D1C4E9;
             border-radius: 8px;
         }
-        .instructions-section h2, .manual-voting-section h2 { /* Applied same style to new section H2 */
-            text-align: left; /* Left-aligned section H2s */
+        .instructions-section h2, .manual-voting-section h2 { 
+            text-align: left; 
             margin-top: 0;
             margin-bottom: 1.5rem;
         }
         .instructions-section ol, .instructions-section ul,
-        .manual-voting-section ul, .manual-voting-section ol { /* Applied same style to new section lists */
+        .manual-voting-section ul, .manual-voting-section ol { 
             padding-left: 25px;
             margin-bottom: 1rem;
         }
-        .instructions-section li, .manual-voting-section li { /* Applied same style to new section list items */
+        .instructions-section li, .manual-voting-section li { 
             margin-bottom: 0.8rem;
         }
         .vote-item {
             margin-bottom: 1em;
             padding-left: 1em;
-            border-left: 3px solid #ffeb3b; /* Gold accent */
+            border-left: 3px solid #ffeb3b; 
         }
-        .vote-item strong { /* For category/nominee names */
+        .vote-item strong { 
             color: #333;
         }
         .voting-site-link {
@@ -140,23 +141,42 @@
              display: inline-block;
              margin-left: 5px;
         }
-        .intro-section {
+        .intro-section { /* Your existing class for the intro */
             margin-bottom: 2rem;
         }
-        .nomination-list {
+        .nomination-list { /* Your existing class for the list */
             list-style-type: disc;
             padding-left: 20px;
         }
 
-        @media (max-width: 600px) {
-            body { padding: 15px; margin: 10px; }
+        @media (max-width: 700px) { 
+            body { 
+                padding: 15px; 
+                padding-top: 80px; 
+                margin: 10px; 
+            }
+             .header-logo { 
+                max-width: 120px; 
+                top:10px; 
+                left:10px;
+            }
             h1 { font-size: 1.6em; }
             h2 { font-size: 1.3em; }
             .bookmarklet-link { padding: 12px 20px; font-size: 1em; }
         }
+         @media (max-width: 400px) {
+            .header-logo {
+                max-width: 100px;
+            }
+         }
     </style>
 </head>
 <body>
+
+    <img src="https://2collegebrothers.com/wp-content/uploads/2019/07/cropped-2college_brothers_moving_logo@300x-e1644524227829-2048x975mob-1024x488.png" 
+         alt="2 College Brothers Logo" 
+         class="header-logo">
+
     <h1>Vote Quick & Easy for 2 College Brothers! <span class="emoji">🎉</span></h1>
     <div class="intro-section">
         <p>Want to support <strong>2 College Brothers Moving & Storage</strong>? The voting for Tampa Bay's best of the best starts May 19th and runs through June 1st. You can vote once per day.</p>
