@@ -11,17 +11,13 @@
 
     <meta property="og:title" content="Vote for 2 College Brothers!"> 
     <meta property="og:description" content="A simple helper page to make voting for 2 College Brothers super fast & easy!">
-    <meta property="og:image" content="https://swikle.com/images/social-preview.png"> 
-    <meta property="og:url" content="https://swikle.com/"> 
+    <meta property="og:image" content="https://swikle.com/images/social-preview.png">  <meta property="og:url" content="https://swikle.com/"> 
     <meta property="og:type" content="website">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Vote for 2 College Brothers!"> 
     <meta name="twitter:description" content="A simple helper page to make voting for 2 College Brothers super fast & easy!">
-    <meta name="twitter:image" content="https://swikle.com/images/social-preview.png"> 
-    
-    <meta name="theme-color" content="#512da8">
-
+    <meta name="twitter:image" content="https://swikle.com/images/social-preview.png"> <meta name="theme-color" content="#512da8">
 
     <style>
         body {
@@ -76,8 +72,11 @@
             text-align: center;
             box-shadow: 0 2px 6px rgba(0,0,0,0.05);
         }
-        .bookmarklet-link-container p {
-            margin-bottom: 0.5rem;
+        .desktop-hint { 
+            font-size: 0.85em;
+            color: #555;
+            margin-top: 5px;
+            margin-bottom: 15px; 
         }
         .bookmarklet-link {
             display: inline-block;
@@ -116,6 +115,35 @@
         }
         .instructions-section li, .manual-voting-section li { 
             margin-bottom: 0.8rem;
+        }
+        .mobile-instructions summary { 
+            cursor: pointer;
+            font-weight: bold;
+            padding: 5px;
+            margin-bottom: 5px;
+        }
+        .mobile-instructions summary:hover {
+            background-color: #e0e0e0;
+        }
+        .copy-button-container {
+            margin: 15px 0; 
+        }
+        #copyBookmarkletBtn {
+            padding: 10px 18px; 
+            background-color: #673AB7; 
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em; 
+        }
+        #copyBookmarkletBtn:hover {
+            background-color: #512da8;
+        }
+        #copyMessage {
+            font-size: 0.9em;
+            margin-left: 10px;
+            font-weight: bold;
         }
         .vote-item {
             margin-bottom: 1em;
@@ -186,59 +214,55 @@
     <h1>Vote for 2 College Brothers! <span class="emoji">🎉</span></h1>
     <div class="intro-section">
         <p>Want to support <strong>2 College Brothers Moving & Storage</strong>? The voting for Tampa Bay's best of the best starts May 19th and runs through June 1st. You can vote once per day.</p>
-        
         <p>We are nominated for three exciting categories:</p>
         <ul class="nomination-list">
             <li>Best moving company</li>
             <li>Best moving company for out of state moves</li>
             <li>Best storage company</li>
         </ul>
-        
         <p>Last year, we won <strong>Best Storage Company</strong> and were a top 3 finalist for the other two categories! This page gives you a special browser button (a "bookmarklet") to help make voting super simple for all three award entries.</p>
     </div>
 
     <div class="bookmarklet-container">
         <p><strong>Option 1: Use the Voting Button!</strong></p>
-        <p>Drag this button to your Bookmarks Bar (Desktop):</p>
-        <a class="bookmarklet-link" title="Drag me to your Bookmarks Bar!" href='javascript:(function(){function fEBT(sel,txt,cPA){var els=document.querySelectorAll(sel);for(var i=0;i<els.length;i++){if(els[i].textContent.trim().includes(txt)){return cPA?els[i].closest(%27a%27):els[i];}}return null;}function sRC(el){if(!el)return false;const eP={bubbles:true,cancelable:true,view:window};el.dispatchEvent(new PointerEvent(%27pointerdown%27,eP));el.dispatchEvent(new MouseEvent(%27mousedown%27,eP));el.dispatchEvent(new PointerEvent(%27pointerup%27,eP));el.dispatchEvent(new MouseEvent(%27mouseup%27,eP));el.dispatchEvent(new MouseEvent(%27click%27,eP));if(el.type===%27checkbox%27){if(!el.checked)el.checked=true;el.dispatchEvent(new Event(%27change%27,eP));}return true;}var CNCelS=%27div.ballot-button.active.secondary-button[data-v-4002897a]%27;var CNCTxt=%27Choose New Category%27;var GBSel=%27button.go-back-btn[data-v-7058e586]%27;var GBTxt=%27Go Back%27;var CNCBtn=fEBT(CNCelS,CNCTxt,false);var GBBtn;if(CNCBtn&&CNCBtn.offsetParent!==null){alert(%27Found "Choose New Category". Clicking to reset. Please click bookmarklet again after page updates.%27);CNCBtn.click();}else{GBBtn=fEBT(GBSel,GBTxt,false);if(GBBtn&&GBBtn.offsetParent!==null){alert(%27Found "Go Back". Clicking to reset. Please click bookmarklet again after page updates.%27);GBBtn.click();}else{var targetSite=%27https://tampabaybestofthebest.com/vote/#%27;if(!window.location.href.startsWith(targetSite.substring(0,targetSite.length-2))){window.location.href=targetSite;}else{var sels=[{type:"navigate",navS:"p.category-text[data-v-33826b8f]",navT:"Services",cPA:true,cbS:null},{type:"navigate",navS:"button.subcategory[data-v-33826b8f]",navT:"Moving Company",cPA:false,cbS:null},{type:"vote",navS:null,navT:null,cPA:false,cbS:"input#option_0_1"},{type:"navigate",navS:"div.ballot-button.active.secondary-button[data-v-4002897a]",navT:"Continue to Moving Company for Out of State Moves",cPA:false,cbS:null},{type:"vote",navS:null,navT:null,cPA:false,cbS:"input#option_0_0"},{type:"navigate",navS:"div.ballot-button.active.secondary-button[data-v-4002897a]",navT:"Choose New Category",cPA:false,cbS:null},{type:"navigate",navS:"p.category-text[data-v-33826b8f]",navT:"Services",cPA:true,cbS:null},{type:"navigate",navS:"button.subcategory[data-v-33826b8f]",navT:"Storage Companies",cPA:false,cbS:null},{type:"vote",navS:null,navT:null,cPA:false,cbS:"input#option_0_0"}];var gBCS="div.ballot-buttons-container";var ci=0;var dN=700,dAC=800,dAVB=400,dS=250;function nxt(){if(ci>=sels.length){alert("All actions attempted. Review ballot & submit.");return;}var itm=sels[ci];function clkAVB(){var bC=document.querySelector(gBCS);var aVB=null;if(bC){var pB=bC.querySelectorAll("button.ballot-button.add-to-button");for(var i=0;i<pB.length;i++){if(pB[i].textContent.trim()==="Add Vote"&&!pB[i].disabled){aVB=pB[i];break;}}}if(aVB){if(sRC(aVB)){setTimeout(function(){ci++;setTimeout(nxt,dN);},dAVB);}else{ci++;setTimeout(nxt,dN);}}else{ci++;setTimeout(nxt,dN);}}function clkCB(){var cbEl=document.querySelector(itm.cbS);if(cbEl){cbEl.scrollIntoView({behavior:"smooth",block:"center",inline:"center"});setTimeout(function(){if(sRC(cbEl)){setTimeout(clkAVB,dAC);}else{ci++;setTimeout(nxt,dN);}},dS);}else{ci++;setTimeout(nxt,dN);}}if(itm.type==="navigate"){var navEl=fEBT(itm.navS,itm.navT,itm.cPA||false);if(navEl){navEl.scrollIntoView({behavior:"smooth",block:"center",inline:"center"});setTimeout(function(){navEl.click();ci++;setTimeout(nxt,dN);},dS);}else{ci++;setTimeout(nxt,dN);}}else if(itm.type==="vote"){clkCB();}else{ci++;setTimeout(nxt,dN);}}nxt();}}}})();'>Vote for 2CB! <span class="emoji">🗳️</span></a>
-        <p class="note">(If on an iPhone, see the "How to Add" steps below!)</p>
+        <p>Drag this button to your Bookmarks Bar (Desktop users):</p>
+        <p class="desktop-hint">(Hint: If your Bookmarks Bar isn't visible, try Ctrl+Shift+B on Windows, or Cmd+Shift+B on a Mac.)</p>
+        <a class="bookmarklet-link" title="Drag me to your Bookmarks Bar!" href='javascript:(function()%7Bfunction fEBT(sel,txt,cPA)%7Bvar els=document.querySelectorAll(sel);for(var i=0;i<els.length;i++)%7Bif(els%5Bi%5D.textContent.trim().includes(txt))%7Breturn cPA?els%5Bi%5D.closest(%27a%27):els%5Bi%5D;%7D%7Dreturn null;%7Dfunction sRC(el)%7Bif(!el)return false;const eP=%7Bbubbles:true,cancelable:true,view:window%7D;el.dispatchEvent(new PointerEvent(%27pointerdown%27,eP));el.dispatchEvent(new MouseEvent(%27mousedown%27,eP));el.dispatchEvent(new PointerEvent(%27pointerup%27,eP));el.dispatchEvent(new MouseEvent(%27mouseup%27,eP));el.dispatchEvent(new MouseEvent(%27click%27,eP));if(el.type===%27checkbox%27)%7Bif(!el.checked)el.checked=true;el.dispatchEvent(new Event(%27change%27,eP));%7Dreturn true;%7Dvar CNCelS=%27div.ballot-button.active.secondary-button%5Bdata-v-4002897a%5D%27;var CNCTxt=%27Choose New Category%27;var GBSel=%27button.go-back-btn%5Bdata-v-7058e586%5D%27;var GBTxt=%27Go Back%27;var CNCBtn=fEBT(CNCelS,CNCTxt,false);var GBBtn;if(CNCBtn&&CNCBtn.offsetParent!==null)%7Balert(%27Found "Choose New Category". Clicking to reset. Please click bookmarklet again after page updates.%27);CNCBtn.click();%7Delse%7BGBBtn=fEBT(GBSel,GBTxt,false);if(GBBtn&&GBBtn.offsetParent!==null)%7Balert(%27Found "Go Back". Clicking to reset. Please click bookmarklet again after page updates.%27);GBBtn.click();%7Delse%7Bvar targetSite=%27https://tampabaybestofthebest.com/vote/%23%27;if(!window.location.href.startsWith(targetSite.substring(0,targetSite.length-2)))%7Bwindow.location.href=targetSite;%7Delse%7Bvar sels=%5B%7Btype:"navigate",navS:"p.category-text%5Bdata-v-33826b8f%5D",navT:"Services",cPA:true,cbS:null%7D,%7Btype:"navigate",navS:"button.subcategory%5Bdata-v-33826b8f%5D",navT:"Moving Company",cPA:false,cbS:null%7D,%7Btype:"vote",navS:null,navT:null,cPA:false,cbS:"input%23option_0_1"%7D,%7Btype:"navigate",navS:"div.ballot-button.active.secondary-button%5Bdata-v-4002897a%5D",navT:"Continue to Moving Company for Out of State Moves",cPA:false,cbS:null%7D,%7Btype:"vote",navS:null,navT:null,cPA:false,cbS:"input%23option_0_0"%7D,%7Btype:"navigate",navS:"div.ballot-button.active.secondary-button%5Bdata-v-4002897a%5D",navT:"Choose New Category",cPA:false,cbS:null%7D,%7Btype:"navigate",navS:"p.category-text%5Bdata-v-33826b8f%5D",navT:"Services",cPA:true,cbS:null%7D,%7Btype:"navigate",navS:"button.subcategory%5Bdata-v-33826b8f%5D",navT:"Storage Companies",cPA:false,cbS:null%7D,%7Btype:"vote",navS:null,navT:null,cPA:false,cbS:"input%23option_0_0"%7D%5D;var gBCS="div.ballot-buttons-container";var ci=0;var dN=700,dAC=800,dAVB=400,dS=250;function nxt()%7Bif(ci>=sels.length)%7Balert("All actions attempted. Review ballot & submit.");return;%7Dvar itm=sels%5Bci%5D;function clkAVB()%7Bvar bC=document.querySelector(gBCS);var aVB=null;if(bC)%7Bvar pB=bC.querySelectorAll("button.ballot-button.add-to-button");for(var i=0;i<pB.length;i++)%7Bif(pB%5Bi%5D.textContent.trim()==="Add Vote"&&!pB%5Bi%5D.disabled)%7BaVB=pB%5Bi%5D;break;%7D%7D%7Dif(aVB)%7Bif(sRC(aVB))%7BsetTimeout(function()%7Bci++;setTimeout(nxt,dN);%7D,dAVB);%7Delse%7Bci++;setTimeout(nxt,dN);%7D%7Delse%7Bci++;setTimeout(nxt,dN);%7D%7Dfunction clkCB()%7Bvar cbEl=document.querySelector(itm.cbS);if(cbEl)%7BcbEl.scrollIntoView(%7Bbehavior:"smooth",block:"center",inline:"center"%7D);setTimeout(function()%7Bif(sRC(cbEl))%7BsetTimeout(clkAVB,dAC);%7Delse%7Bci++;setTimeout(nxt,dN);%7D%7D,dS);%7Delse%7Bci++;setTimeout(nxt,dN);%7D%7Dif(itm.type==="navigate")%7Bvar navEl=fEBT(itm.navS,itm.navT,itm.cPA%7C%7Cfalse);if(navEl)%7BnavEl.scrollIntoView(%7Bbehavior:"smooth",block:"center",inline:"center"%7D);setTimeout(function()%7BnavEl.click();ci++;setTimeout(nxt,dN);%7D,dS);%7Delse%7Bci++;setTimeout(nxt,dN);%7D%7Delse if(itm.type==="vote")%7BclkCB();%7Delse%7Bci++;setTimeout(nxt,dN);%7D%7Dnxt();%7D%7D%7D%7D)();'>Vote for 2CB! <span class="emoji">🗳️</span></a>
+        <p class="note">(Mobile users: See "How to Add" instructions below!)</p>
     </div>
 
     <div class="instructions-section">
         <h2>How to Add & Use the Voting Button:</h2>
         <ol>
-            <li><strong>For Desktop Browsers (like Chrome, Firefox, Edge):</strong>
-                <ul>
-                    <li>Simply <strong>drag the yellow "Vote for 2CB! 🗳️" button</strong> above straight onto your browser's Bookmarks Bar.
-                    <br><em>(If your Bookmarks Bar isn't showing, try pressing Ctrl+Shift+B on Windows, or Cmd+Shift+B on a Mac.)</em></li>
+            <li class="mobile-instructions"><strong>For Phones & Tablets (iPhone, Android, etc.):</strong> <br> Easiest way to add the voting button!
+                <div class="copy-button-container">
+                    <button id="copyBookmarkletBtn">Tap Here to Copy Voting Button Code</button>
+                    <span id="copyMessage" style="color:green; display:none;">Copied!</span>
+                </div>
+                <ul style="list-style-type: decimal-leading-zero;">
+                    <li>Once the code is copied (using the button above), go to your browser's **Bookmarks** section.</li>
+                    <li>Find the option to **"Add Bookmark"** or **"New Bookmark"**.
+                        <br><em>(Some browsers might need you to bookmark the current page first, then find that new bookmark in your list and choose "Edit".)</em></li>
+                    <li>For the **Name**, type something fun like "2CB Fast Vote!".</li>
+                    <li>For the **Address (or URL)**, delete anything that's there and then **Paste** the code you copied. (It should start with <code>javascript:</code>).</li>
+                    <li>Save the bookmark. All done! <span class="emoji">👍</span></li>
                 </ul>
             </li>
-            <li><strong>For Phones & Tablets (Create a Bookmark Manually):</strong>
+            <li><strong>Time to Vote!</strong>
                 <ul>
-                    <li>Tap and hold the yellow "Vote for 2CB! 🗳️" button above.</li>
-                    <li>From the menu that pops up, choose "Copy Link Address" (or similar wording like "Copy URL" or "Copy Link").</li>
-                    <li>Now, open your browser's bookmarks section.</li>
-                    <li>Create a new bookmark (you might need to bookmark any page first, then find it in your list and choose "Edit").</li>
-                    <li>Give your new bookmark a name (like "Vote for 2CB!").</li>
-                    <li>In the Address or URL field for the bookmark, delete any existing web address and then paste the link you copied. (It will start with <code>javascript:</code>).</li>
-                    <li>Save it, and you're all set!</li>
+                    <li>Open your browser and go to the main voting page: <a class="voting-site-link" href="https://tampabaybestofthebest.com/vote/#" target="_blank">Best of the Best Voting Page</a>.</li>
+                    <li>Once the page is loaded, open your bookmarks and tap your new "2CB Fast Vote!" bookmark.</li>
+                    <li><span class="emoji">✨</span> Watch it go! The helper will start navigating and selecting the entries.
+                        <em>(Friendly reminder: If you click it when you're NOT on the voting site, it will take you there first. Just click your bookmark again once the voting page loads!)</em></li>
                 </ul>
             </li>
-            <li><strong>Using Your New Button:</strong>
-                <ul>
-                    <li>First, head over to the voting website: <a class="voting-site-link" href="https://tampabaybestofthebest.com/vote/#" target="_blank">Best of the Best Voting Page</a>.</li>
-                    <li>Once the page is loaded, just click your new "Vote for 2CB!" bookmark.</li>
-                    <li><span class="emoji">✨</span> The helper will start selecting the entries. Takes about 10 seconds.
-                        <em>(If you weren't on the voting site, the first click will take you there. Just click your bookmark again once the page loads!)</em></li>
-                </ul>
-            </li>
-            <li><strong>Important Final Step:</strong> After the helper finishes (it will pop up an "All actions attempted..." message), please <strong>double-check your ballot</strong> on the site to make sure everything looks right. Then, you click the website's own <strong>"Submit Voting Ballot"</strong> button to cast your votes officially.</li>
+            <li><strong>The Final Click is Yours:</strong> After the helper pops up an "All actions attempted..." message, please <strong>glance over your ballot</strong> on the voting site to make sure it looks right. Then, you get to click the website's own big <strong>"Submit Voting Ballot"</strong> button to make your votes count!</li>
         </ol>
     </div>
 
     <div class="manual-voting-section">
         <h2>Option 2: Vote Manually Step-by-Step <span class="emoji">👍</span></h2>
-        <p>If you prefer to click through yourself, here's what to vote for:</p>
+        <p>If you prefer to click through yourself, here’s what to vote for:</p>
         <ol>
             <li>First, go to the <a class="voting-site-link" href="https://tampabaybestofthebest.com/vote/#" target="_blank">Best of the Best Voting Page</a>.</li>
             <li>
@@ -277,5 +301,27 @@
     </div>
 
     <p class="final-note">This little helper makes voting for <strong>2 College Brothers</strong> in their three categories a breeze! <br>Remember, it just helps with the selections; you always have the final say by submitting the ballot. Happy voting!</p>
+
+    <script>
+    // JavaScript for the "Tap Here to Copy" button
+    var copyButton = document.getElementById('copyBookmarkletBtn');
+    if (copyButton) {
+        copyButton.addEventListener('click', function() {
+            var bookmarkletLink = document.querySelector('.bookmarklet-link');
+            if (bookmarkletLink) {
+                var bookmarkletCode = bookmarkletLink.getAttribute('href');
+                navigator.clipboard.writeText(bookmarkletCode).then(function() {
+                    var msg = document.getElementById('copyMessage');
+                    if (msg) {
+                        msg.style.display = 'inline';
+                        setTimeout(function(){ msg.style.display = 'none'; }, 2500); 
+                    }
+                }).catch(function(err) {
+                    alert('Could not copy code automatically. Please tap and hold the yellow "Vote for 2CB!" button above, then choose "Copy Link".');
+                });
+            }
+        });
+    }
+    </script>
 </body>
 </html>
